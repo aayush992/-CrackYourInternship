@@ -1,0 +1,14 @@
+int maxProfit(int* p, int pricesSize) {
+    int max=0;
+    int min=p[0];
+    for(int i=1;i<pricesSize;i++){
+            if(p[i]<min){
+            min=p[i];
+            }
+            else if(p[i]-min>max){
+                max=p[i]-min;
+            }
+    }
+          return max;
+    
+}
